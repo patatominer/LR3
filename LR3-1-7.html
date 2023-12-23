@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+	<body style="background-color:LightSteelBlue;"> 
+		<script>
+		/* Дано целое число N и набор из N целых чисел. 
+		Вывести в том же порядке все четные числа из данного набора и их кол-во К */
+		"use strict";
+
+		let N = Number(prompt("Введите колиство чисел набора:")), ListOfNumbers1 = [], ListOfNumbers2 = [], NewNumber; 
+		
+		for (let i = 0; i < N; i++) {                         
+			NewNumber = Math.floor(Math.random()*20);         
+			ListOfNumbers1.push(NewNumber);                                   
+		}
+		alert("Получившийся набор: " + ListOfNumbers1);
+
+		let count = 0
+		for (let i = 0; i < N; i++) {
+			if (ListOfNumbers1[i] % 2 == 0) {
+				count += 1;
+				ListOfNumbers2.push(ListOfNumbers1[i]);
+			}; 
+		}
+		alert("Четные числа: " + ListOfNumbers2 + " в количестве " + count );
+		
+		</script>
+	</body>
+</html>
